@@ -13,6 +13,8 @@ use App\Service\TransactionCalc;
 class System
 {
     private static ?array $config = null;
+    private FileInput $fileInput;
+    private TransactionCalc $transactionCalc;
 
     public static function getConfig(string $name): ?string
     {
@@ -22,8 +24,6 @@ class System
 
         return self::$config[$name] ?? null;
     }
-    private FileInput $fileInput;
-    private TransactionCalc $transactionCalc;
 
     public function __construct(private array $arguments)
     {
