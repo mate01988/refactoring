@@ -1,0 +1,28 @@
+{
+  "name": "mkowalczyk/refactoring",
+  "authors": [
+    {
+      "name": "Mateusz Kowalczyk",
+      "email": "kowalczykmateusz@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "require": {
+    "guzzlehttp/guzzle": "^7.4",
+    "ext-decimal": "*"
+  },
+  "require-dev": {
+    "phpstan/phpstan": "^0.12.99",
+    "friendsofphp/php-cs-fixer": "^3.2",
+    "phpunit/phpunit": "^9"
+  },
+  "scripts": {
+    "lint-fix": "php-cs-fixer fix --config=.php-cs-fixer.dist.php -v --using-cache=no",
+    "phpstan": "phpstan analyse --no-progress --memory-limit=4G",
+    "phpunit": "./vendor/bin/phpunit"
+  }
+}

@@ -1,0 +1,13 @@
+parameters:
+    level: 5
+    paths:
+        - src
+    bootstrapFiles:
+        - bootstrap.php
+    inferPrivatePropertyTypeFromConstructor: true
+    # suppress phpstan 0.12 extra checks
+    checkGenericClassInNonGenericObjectType: false
+    checkMissingIterableValueType: false
+#    ignoreErrors:
+        # suppress doctrine collection type hint checks
+#        - '#type mapping mismatch: property can contain Doctrine\\Common\\Collections\\ArrayCollection<\(int\|string\), mixed> but database expects Doctrine\\Common\\Collections\\Collection&iterable#'
